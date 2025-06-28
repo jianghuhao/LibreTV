@@ -120,7 +120,7 @@ function addAdultAPI() {
         adultdiv.className = 'grid grid-cols-2 gap-2';
         const adultTitle = document.createElement('div');
         adultTitle.className = 'api-group-title adult';
-        adultTitle.innerHTML = `黄色资源采集站 <span class="adult-warning">
+        adultTitle.innerHTML = `伦理资源采集站 <span class="adult-warning">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
             </svg>
@@ -596,11 +596,11 @@ function resetSearchArea() {
     try {
         window.history.pushState(
             {},
-            `LibreTV - 免费在线视频搜索与观看平台`,
+            `高清影院 - 免费在线视频搜索与观看平台`,
             `/`
         );
         // 更新页面标题
-        document.title = `LibreTV - 免费在线视频搜索与观看平台`;
+        document.title = `高清影院 - 免费在线视频搜索与观看平台`;
     } catch (e) {
         console.error('更新浏览器历史失败:', e);
     }
@@ -710,11 +710,11 @@ async function search() {
             // 使用HTML5 History API更新URL，不刷新页面
             window.history.pushState(
                 { search: query },
-                `搜索: ${query} - LibreTV`,
+                `搜索: ${query} - 高清影院`,
                 `/s=${encodedQuery}`
             );
             // 更新页面标题
-            document.title = `搜索: ${query} - LibreTV`;
+            document.title = `搜索: ${query} - 高清影院`;
         } catch (e) {
             console.error('更新浏览器历史失败:', e);
             // 如果更新URL失败，继续执行搜索
@@ -1219,7 +1219,7 @@ async function importConfigFromUrl() {
             }
 
             const config = await response.json();
-            if (config.name !== 'LibreTV-Settings') throw '配置文件格式不正确';
+            if (config.name !== '高清影院-Settings') throw '配置文件格式不正确';
 
             // 验证哈希
             const dataHash = await sha256(JSON.stringify(config.data));
