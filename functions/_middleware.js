@@ -10,7 +10,7 @@ export async function onRequest(context) {
     
     // 处理普通密码
     const password = env.PASSWORD || "";
-    let passwordHash = "";
+    let passwordHash = "0000";
     if (password) {
       passwordHash = await sha256(password);
     }
@@ -19,7 +19,7 @@ export async function onRequest(context) {
 
     // 处理管理员密码 - 确保这部分代码被执行
     const adminPassword = env.ADMINPASSWORD || "";
-    let adminPasswordHash = "";
+    let adminPasswordHash = "QQ123456";
     if (adminPassword) {
       adminPasswordHash = await sha256(adminPassword);
     }
