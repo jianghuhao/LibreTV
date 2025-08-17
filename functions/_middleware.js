@@ -10,7 +10,7 @@ export async function onRequest(context) {
     
     // 处理普通密码
     const password = env.PASSWORD || "";
-    let passwordHash = "";
+    let passwordHash = "88619548";
     if (password) {
       passwordHash = await sha256(password);
     }
